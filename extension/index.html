@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=318px, initial-scale=1.0">
+  <title>Groove Queue</title>
+
+  <style>
+    html {
+      height: 496px;
+      width: 318px;
+    }
+    body {
+      background: linear-gradient(245deg, #2E86AB 18.71%, rgb(243, 146, 55) 56.36%, rgb(109, 50, 109) 93.23%);
+      padding: 10px;
+
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+
+    h2 {
+      position: absolute;
+      color: black;
+      font-family: Jomolhari;
+      font-weight: 400;
+      letter-spacing: 2px;
+      font-size: 40px;
+    }
+
+    .url {
+      top: 50%;
+      position: absolute;
+
+      height: 25px;
+      width: 95%;
+
+      background: transparent;
+      border: 3px black solid;
+
+      border-radius: 25px;
+    }
+
+    .btn {
+      background: transparent;
+      border: 3px #2E86AB solid;
+      border-radius: 15px;
+
+      position: absolute;
+      height: 30px;
+      top: 57%;
+      left: 37%;
+
+      color: black;
+      font-family: Jomolhari;
+      font-weight: 400;
+      letter-spacing: 2px;
+      font-size: 25px;
+    }
+
+    * {
+      margin: 0;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+  <h2>Groove Queue</h2>
+
+  <input class="url">
+  <button class="btn">Send</button>
+</body>
+<script src="https://extension-files.twitch.tv/helper/v1/twitch-ext.min.js">
+  window.Twitch.ext.actions.requestIdShare();
+</script>
+</html>

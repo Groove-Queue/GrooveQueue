@@ -1,0 +1,36 @@
+{
+  "name": "groovequeue",
+  "version": "0.0.0",
+  "description": "A website that allows Twitch users to add songs to a streamers queue",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "types": "./index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheDevYellowy/GrooveQueue.git"
+  },
+  "author": "TheDevYellowy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TheDevYellowy/GrooveQueue/issues"
+  },
+  "homepage": "https://github.com/TheDevYellowy/GrooveQueue#readme",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "mongoose": "^8.0.2",
+    "twitch-utils": "github:TheDevYellowy/twitch"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/express-session": "^1.17.10",
+    "@types/node": "^20.10.3",
+    "eslint": "^8.55.0",
+    "eslint-config-google": "^0.14.0",
+    "tslib": "^2.6.2"
+  }
+}

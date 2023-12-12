@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('includes/head') %>
+<head>
+  <link rel="stylesheet" href="/css/dashboard.css" />
+</head>
+<body>
+  <div class="userWrapper">
+    <div class="userObject">
+      <p class="userTitle"><%- user.display %></p>
+      <% if (!user.spoota) { %>
+        <a href="/login/spotify"><button class="userButton">Link Spotify</button></a>
+      <% } else { %>
+        <a href="/dashboard/<%- user.login %>"><button class="userButton">Dashboard</button></a>
+      <% } %>
+    </div>
+  </div>
+</body>
+</html>

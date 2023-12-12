@@ -1,0 +1,73 @@
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 132px 132px;
+  margin: 0;
+  align-items: flex-start;
+  align-content: space-between;
+  column-gap: 325px;
+  flex-wrap: wrap;
+}
+
+.userWrapper {
+  width: 335px;
+  height: 335px;
+  position: relative;
+}
+
+.userObject {
+  width: 335px;
+  height: 335px;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  border-radius: 25px;
+  border: 3px black solid;
+
+  justify-content: center;
+  text-align: center;
+}
+
+.userTitle {
+  /* left: 15%; */
+  top: 0px;
+  position: relative;
+  color: white;
+  font-size: 40px;
+  font-family: Jomolhari;
+  font-weight: 400;
+  letter-spacing: 2px;
+  word-wrap: break-word;
+}
+
+button.userButton {
+  background: transparent;
+  width: 295px;
+  height: 65px;
+  left: 18px;
+  top: 250px;
+  position: absolute;
+  border-radius: 25px;
+  border: 4px #349FCC solid;
+
+  transition: 0.5s;
+}
+
+button.userButton:hover {
+  transition: 0.5s;
+  background: #349FCC
+}
+
+a button.userButton  {
+  color: white;
+  font-size: 32px;
+  font-family: Jomolhari;
+  font-weight: 400;
+  letter-spacing: 1.60px;
+  word-wrap: break-word
+}

@@ -1,0 +1,51 @@
+.background {
+  width: 1560px;
+  height: 950px;
+  left: 163px;
+  top: 31px;
+  position: absolute;
+  background: rgba(131, 131, 131, 0.44);
+  border-radius: 50px
+}
+
+.name {
+  left: 50px;
+  top: 0px;
+  position: absolute;
+  color: #1E1E1E;
+  font-size: 70px;
+  font-family: Jomolhari;
+  font-weight: 400;
+  letter-spacing: 3.20px;
+  word-wrap: break-word
+}
+
+.activity {
+  width: 719px;
+  height: 467px;
+  left: 50px;
+  top: 107px;
+  position: absolute;
+  border-radius: 25px;
+  border: 2px black solid
+}
+
+.settings {
+  width: 719px;
+  height: 295px;
+  left: 50px;
+  top: 620px;
+  position: absolute;
+  border-radius: 25px;
+  border: 2px black solid
+}
+
+.queue {
+  width: 643px;
+  height: 808px;
+  left: 837px;
+  top: 107px;
+  position: absolute;
+  border-radius: 25px;
+  border: 2px black solid
+}

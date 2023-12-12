@@ -1,0 +1,16 @@
+body {
+  background: linear-gradient(245deg, #2E86AB 18.71%, rgb(243, 146, 55) 56.36%, rgb(109, 50, 109) 93.23%);
+
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+a {
+  text-decoration: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
