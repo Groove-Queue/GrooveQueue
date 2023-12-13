@@ -1,3 +1,5 @@
+console.clear();
+
 const mongoose = require("mongoose");
 const express = require("express");
 const session = require("express-session");
@@ -9,6 +11,7 @@ const app = express();
 var prod = false;
 if (process.env.NODE_ENV == "PRODUCTION") prod = true;
 
+const api = require("./web/routers/api");
 const index = require("./web/routers/index");
 const callbacks = require("./web/routers/callbacks");
 const dashboard = require("./web/routers/dashboard");
@@ -30,6 +33,7 @@ app
   .set("views", path.join(__dirname, "web", "views"))
   .use("/dashboard", dashboard)
   .use("/callbacks", callbacks)
+  .use("/api", api)
   .use("/", index)
   .listen(8080, () =>
     console.log(

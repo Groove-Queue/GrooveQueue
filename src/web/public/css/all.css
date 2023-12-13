@@ -9,8 +9,19 @@ a {
   text-decoration: none;
 }
 
+.inside {
+  height: 98%;
+  width: 98%;
+  background: transparent;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+  font-family: Jomolhari;
+  font-weight: 400;
+  letter-spacing: 3.20px;
+  /* word-wrap: break-word; */
 }

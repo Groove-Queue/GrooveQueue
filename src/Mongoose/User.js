@@ -9,6 +9,7 @@ module.exports = model(
     spootr: { type: String },
     id: { type: String },
     modFor: [{ type: String }],
+    logs: [{ type: Object }],
     settings: {
       type: Object,
       default: {

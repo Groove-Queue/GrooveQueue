@@ -8,44 +8,143 @@
   border-radius: 50px
 }
 
+textarea {
+  height: 98%;
+  width: 100%;
+  
+  background: transparent;
+  border: transparent;
+  resize: none;
+
+  white-space: pre;
+  overflow-wrap: normal;
+  overflow-x: scroll;
+  pointer-events: all;
+}
+
+textarea::-webkit-scrollbar {
+  width: 1em;
+  height: auto;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+.back {
+  position: absolute;
+  background: transparent;
+  border: 2px black solid;
+
+  width: 180px;
+  border-radius: 25px;
+  font-size: 50px;
+  left: 86%;
+  top: 20px;
+}
+
+td.user {
+  width: 20%;
+}
+td.line {
+  width: 1%;
+}
+td.song {
+  width: 64%;
+}
+td.buttons {
+  width: 15%;
+}
+
+.accept {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+
+  background: transparent;
+  border: 2px #57FF7C solid;
+  border-radius: 10px;
+  color: #57FF7C;
+}
+
+.reject {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+
+  margin-left: 5%;
+  background: transparent;
+  border: 2px #FF3636 solid;
+  border-radius: 10px;  
+  color: #FF3636;
+}
+
+h3.title {
+  font-size: 49px;
+  position: absolute;
+}
+
 .name {
   left: 50px;
   top: 0px;
   position: absolute;
   color: #1E1E1E;
   font-size: 70px;
-  font-family: Jomolhari;
-  font-weight: 400;
-  letter-spacing: 3.20px;
-  word-wrap: break-word
 }
 
 .activity {
   width: 719px;
-  height: 467px;
+  height: 460px;
   left: 50px;
-  top: 107px;
+  top: 114px;
   position: absolute;
   border-radius: 25px;
-  border: 2px black solid
+  border: 2px black solid;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title#activity {
+  top: 60px;
+  left: 65px;
 }
 
 .settings {
   width: 719px;
-  height: 295px;
+  height: 288px;
   left: 50px;
-  top: 620px;
+  top: 627px;
   position: absolute;
   border-radius: 25px;
-  border: 2px black solid
+  border: 2px black solid;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title#settings {
+  left: 70px;
+  top: 570px;
 }
 
 .queue {
   width: 643px;
-  height: 808px;
+  height: 801px;
   left: 837px;
-  top: 107px;
+  top: 114px;
   position: absolute;
   border-radius: 25px;
-  border: 2px black solid
+  border: 2px black solid;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title#queue {
+  top: 60px;
+  left: 852px;
 }

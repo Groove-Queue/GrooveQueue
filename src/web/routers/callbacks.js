@@ -32,7 +32,9 @@ router.get("/twitch", (req, res) => {
   })
     .then(async (resp) => {
       if (!resp.ok) return res.redirect("/");
-      const { access_token } = await resp.json();
+      const { access_token, refresh_token } = await resp.json();
+      req.session.twitch_token = access_token;
+      req.session.twitch_refresh = refresh_token;
 
       const userdata = await api.get(
         "users",

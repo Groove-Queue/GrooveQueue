@@ -7,9 +7,32 @@
 <body>
   <div class="background">
     <p class="name"><%- user.display %></p>
-    <div class="activity"></div>
-    <div class="queue"></div>
-    <div class="settings"></div>
+    <a href="/dashboard"><button class="back">Back</button></a>
+
+    <h3 class="title" id="activity">Logs</h3>
+    <div class="activity">
+      <div class="inside">
+        <textarea readonly><%- logs.join('\n') %></textarea>
+      </div>
+    </div>
+    <h3 class="title" id="queue">Queue</h3>
+    <div class="queue">
+      <div class="inside">
+        <form method="post" action="/dashboard/<%- user.login %>">
+          <table style="width: 100%;">
+            <tbody>
+              <% for (const id in queue.songs ) { %>
+                <%- include("includes/table", { song: queue.songs, id }) %>
+              <% } %>
+            </tbody>
+          </table>
+        </form>
+      </div>
+    </div>
+    <h3 class="title" id="settings">Settings</h3>
+    <div class="settings">
+      <div class="inside"></div>
+    </div>
   </div>
 </body>
 </html>

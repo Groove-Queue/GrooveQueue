@@ -1,0 +1,17 @@
+<tr>
+  <td class="user" name="test">
+    <%- song[id].user %>
+    <input type="hidden" value="<%- song[id].user %>" name="name" />
+  </td>
+  <td class="line">
+    -
+  </td>
+  <td class="song">
+    <%- song[id].song %>
+    <input type="hidden" value="<%- song[id].song %>" name="song">
+  </td>
+  <td class="buttons">
+    <button class="accept" name="accept" value="<%- id %>"><i class="fa-solid fa-check"></i></button>
+    <button class="reject" name="reject" value="<%- id %>"><i class="fa-solid fa-xmark"></i></button>
+  </td>
+</tr>

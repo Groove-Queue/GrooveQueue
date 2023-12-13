@@ -16,7 +16,7 @@ router.get("/login/:website", (req, res) => {
 
     params.set("response_type", "code");
     params.set("client_id", process.env.SPOTIFY_CLIENT_ID);
-    params.set("scope", "user-modify-playback-state");
+    params.set("scope", "user-modify-playback-state user-read-private");
     params.set("redirect_uri", process.env.SPOTIFY_REDIRECT_URI);
     params.set("show_dialog", "true");
     res.redirect(`https://accounts.spotify.com/authorize?${params.toString()}`);

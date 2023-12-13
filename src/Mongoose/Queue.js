@@ -4,6 +4,6 @@ module.exports = model(
   "Queue",
   new Schema({
     login: { type: String, required: true },
-    songs: [{ type: Object }],
+    songs: { type: Object },
   })
 );
