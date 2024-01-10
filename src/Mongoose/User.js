@@ -10,6 +10,7 @@ module.exports = model(
     id: { type: String },
     modFor: [{ type: String }],
     logs: [{ type: Object }],
+    fuck: { type: String, default: genPassword() },
     settings: {
       type: Object,
       default: {
@@ -18,3 +19,16 @@ module.exports = model(
     },
   })
 );
+
+function genPassword() {
+  const chars =
+    "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+  var word = "";
+
+  for (let i = 0; i < 30; i++) {
+    const f = Math.floor(Math.random() * chars.length);
+    word += chars[f];
+  }
+
+  return word;
+}

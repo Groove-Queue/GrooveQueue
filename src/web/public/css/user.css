@@ -79,6 +79,83 @@ td.buttons {
   color: #FF3636;
 }
 
+div.checkbox-wrapper {
+  --borderColor: black;
+  --borderWidth: 0.1em;
+
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
+}
+
+.checkbox-wrapper input[type=checkbox] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  font-size: 1.8em;
+  border-radius: 0.125em;
+  display: inline-block;
+  border: var(--borderWidth) solid var(--borderColor);
+  width: 0.75em;
+  aspect-ratio: 1;
+  position: relative;
+}
+
+.checkbox-wrapper input[type=checkbox]:before,
+.checkbox-wrapper input[type=checkbox]:after {
+  content: "";
+  position: absolute;
+  background: var(--borderColor);
+  width: calc(var(--borderWidth) * 3);
+  height: var(--borderWidth);
+  top: 50%;
+  left: 10%;
+  transform-origin: left center;
+}
+
+.checkbox-wrapper input[type=checkbox]:before {
+  transform: rotate(45deg) translate(calc(var(--borderWidth) / -2), calc(var(--borderWidth) / -2)) scaleX(0);
+}
+
+.checkbox-wrapper input[type=checkbox]:after {
+  width: calc(var(--borderWidth) * 5);
+  transform: rotate(-45deg) translateY(calc(var(--borderWidth) * 2)) scaleX(0);
+  transform-origin: left center;
+  transition: transform 200ms ease-in;
+}
+
+.checkbox-wrapper input[type=checkbox]:checked:before {
+  transform: rotate(45deg) translate(calc(var(--borderWidth) / -2), calc(var(--borderWidth) / -2)) scaleX(1);
+  transition: transform 200ms ease-in;
+}
+
+.checkbox-wrapper input[type=checkbox]:checked:after {
+  width: calc(var(--borderWidth) * 5);
+  transform: rotate(-45deg) translateY(calc(var(--borderWidth) * 2)) scaleX(1);
+  transition: transform 200ms ease-out 200ms;
+}
+
+.checkbox-wrapper input[type=checkbox]:focus {
+  outline: calc(var(--borderWidth) / 2) dotted rgba(0, 0, 0, 0.25);
+}
+
+.submit {
+  width: fit-content;
+  height: fit-content;
+  padding: 5px;
+  bottom: 100%;
+
+  background: transparent;
+  border: 2px black solid;
+  border-radius: 10px;
+  color: black;
+}
+
+.submit:hover {
+  transition: 0.5s;
+  color: white;
+  background: black;
+}
+
 h3.title {
   font-size: 49px;
   position: absolute;

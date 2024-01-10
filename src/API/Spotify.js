@@ -91,12 +91,29 @@ async function resetToken(refresh) {
   });
 
   const json = await data.json();
-  console.log({ json, function: "resetToken" });
 
   return json.access_token;
 }
 
+async function acceptSong(id, user, queue) {
+  const track = await getSongData(id, user);
+  const status = await addSong(track.uri, user);
+
+  if (!status) {
+    const songs = queue.toObject().songs;
+    delete songs[id];
+
+    await queue.markModified("songs");
+    await user.markModified("logs");
+    await Queue.updateOne({ login: user.login }, { songs: songs });
+    await user.save();
+  } else console.log({ status });
+
+  return;
+}
+
 module.exports = {
   addSong,
+  acceptSong,
   getSongData,
 };

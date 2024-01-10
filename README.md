@@ -18,7 +18,7 @@ Groove Queue is a website and twitch extension that allows viewers to add spotif
 - [x] Dashboard
   - [x] List Users
   - [x] See if spotify account is linked
-- [ ] User Settings
-  - [ ] Queue Reject / Accept
-  - [ ] Update Settings
-  - [ ] Active Feed of logs
+- [x] User Settings
+  - [x] Queue Reject / Accept
+  - [x] Update Settings
+  - [x] Active Feed of logs

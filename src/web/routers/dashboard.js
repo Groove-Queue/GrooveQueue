@@ -67,8 +67,7 @@ router
       );
     }
 
-    // if (test.data.length < 0)
-    //   return res.redirect(`/dashboard/${req.params.login}`);
+    console.log({ test });
 
     if ("accept" in req.body) {
       user.logs.push({
@@ -76,12 +75,12 @@ router
         message: `accepted the song ${req.body.song} that was requested by ${req.body.name}`,
       });
 
-      const songData = await getSongData(queue.songs[req.body.accept].id, user);
-      const status = await addSong(songData.uri, user);
+      const track = await getSongData(queue.songs[req.body.accept].id, user);
+      const status = await addSong(track.uri, user);
 
       if (!status) {
         const songs = queue.toObject().songs;
-        const success = await delete songs[req.body.accept];
+        delete songs[req.body.accept];
 
         await queue.markModified("songs");
         await user.markModified("logs");
@@ -95,7 +94,7 @@ router
       });
 
       const songs = queue.toObject().songs;
-      const success = await delete songs[req.body.reject];
+      delete songs[req.body.reject];
 
       await queue.markModified("songs");
       await user.markModified("logs");

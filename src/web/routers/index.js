@@ -21,8 +21,10 @@ router.get("/login/:website", (req, res) => {
     params.set("show_dialog", "true");
     res.redirect(`https://accounts.spotify.com/authorize?${params.toString()}`);
   } else {
-    res.redirect("/");
+    res.redirect("/login/twitch");
   }
 });
+
+router.get("/login", (req, res) => res.redirect("/login/twitch"));
 
 module.exports = router;

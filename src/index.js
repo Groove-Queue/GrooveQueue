@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const express = require("express");
 const session = require("express-session");
 const path = require("node:path");
+const cors = require("cors");
 require("dotenv").config();
 
 const app = express();
@@ -13,12 +14,14 @@ if (process.env.NODE_ENV == "PRODUCTION") prod = true;
 
 const api = require("./web/routers/api");
 const index = require("./web/routers/index");
+const settings = require("./web/routers/settings");
 const callbacks = require("./web/routers/callbacks");
 const dashboard = require("./web/routers/dashboard");
 
 app
   .use(express.json())
   .use(express.urlencoded({ extended: true }))
+  .use(cors())
   .use(
     session({
       secret: process.env.EXPRESS_SECRET,
@@ -33,6 +36,7 @@ app
   .set("views", path.join(__dirname, "web", "views"))
   .use("/dashboard", dashboard)
   .use("/callbacks", callbacks)
+  .use("/settings", settings)
   .use("/api", api)
   .use("/", index)
   .listen(8080, () =>
